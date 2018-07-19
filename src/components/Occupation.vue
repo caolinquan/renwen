@@ -45,7 +45,7 @@
       }
     },
     created(){
-      this.$ajax.get("http://139.199.79.172/renwen/public/lend/show")
+      this.$ajax.get("yiban.scau.edu.cn/renwen/public/lend/show")
       .then((res)=>{
         this.tableDatas = res.data;
         for(var i=0;i<this.tableDatas.length;i++){

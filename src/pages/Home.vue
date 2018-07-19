@@ -63,7 +63,7 @@ export default {
     }
   },
   created(){
-    this.$ajax.get("http://139.199.79.172/renwen/public/user/info")
+    this.$ajax.get("yiban.scau.edu.cn/renwen/public/user/info")
     .then((res)=>{
       this.userInfo.status = res.data.info.status;
       this.userInfo.info = res.data.info.info;
@@ -72,15 +72,15 @@ export default {
       localStorage.setItem('username',this.userInfo.info.yb_usernick);
     })
     .catch((err)=>{
-      window.location.href="http://139.199.79.172/renwen/public/login";
+      window.location.href="yiban.scau.edu.cn/renwen/public/login";
     })
   },
   methods:{
     logout(){
-      this.$ajax.get("http://139.199.79.172/renwen/public/logout")
+      this.$ajax.get("yiban.scau.edu.cn/renwen/public/logout")
       .then((res)=>{
         localStorage.clear();
-        window.location.href="http://139.199.79.172/renwen/public/login";
+        window.location.href="yiban.scau.edu.cn/renwen/public/login";
       })
       .catch((err)=>{
 

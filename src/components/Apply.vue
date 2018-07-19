@@ -125,7 +125,7 @@
 		methods:{
 			submit(){
 				this.dialogVisible = false;
-				this.$ajax.post("http://139.199.79.172/renwen/public/lend/create",qs.stringify({
+				this.$ajax.post("yiban.scau.edu.cn/renwen/public/lend/create",qs.stringify({
 					personId:this.form.personId,
 					personName:this.form.personName,
 					phone:this.form.phone,
