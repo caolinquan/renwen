@@ -51,7 +51,7 @@
 			}
 		},
 		created(){
-			this.$ajax.get("yiban.scau.edu.cn/renwen/public/lend/check",{
+			this.$ajax.get("http://yiban.scau.edu.cn/renwen/public/lend/check",{
 				params:{
 					personId:localStorage.getItem('userid')
 				}
@@ -93,7 +93,7 @@
 				}
 			},
 			print(id){
-				var url = "yiban.scau.edu.cn/renwen/public/lend/pdf?id="+id;
+				var url = "http://yiban.scau.edu.cn/renwen/public/lend/pdf?id="+id;
 				window.location.href = url;
 				}
 		},

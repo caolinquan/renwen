@@ -52,7 +52,7 @@
 			}
 		},
 		created(){
-			this.$ajax.get("yiban.scau.edu.cn/renwen/public/lend/show")
+			this.$ajax.get("http://yiban.scau.edu.cn/renwen/public/lend/show")
 			.then((res)=>{
 				this.items = res.data
 			})
@@ -62,7 +62,7 @@
 		},
 		methods:{
 			pass(index,id){
-				this.$ajax.post("yiban.scau.edu.cn/renwen/public/admin/judge",
+				this.$ajax.post("http://yiban.scau.edu.cn/renwen/public/admin/judge",
 					qs.stringify({
 						id:id,
 						pass:1
@@ -75,7 +75,7 @@
 				})
 			},
 			rejected(index,id){
-				this.$ajax.post("yiban.scau.edu.cn/renwen/public/admin/judge",
+				this.$ajax.post("http://yiban.scau.edu.cn/renwen/public/admin/judge",
 					qs.stringify({
 						id:id,
 						pass:-1
